@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Buyer Dashboard - AgriLink360</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-50">
+<div class="min-h-screen">
+  <header class="bg-white shadow p-4 flex justify-between items-center">
+    <h1 class="text-lg font-bold">Buyer Dashboard</h1>
+    <button onclick="logout()" class="text-red-600">Logout</button>
+  </header>
+
+  <main class="p-6 max-w-6xl mx-auto">
+    <section>
+      <h2 class="text-xl font-bold mb-2">Available Products</h2>
+      <div id="productList" class="grid md:grid-cols-3 gap-4"></div>
+    </section>
+  </main>
+</div>
+<script src="marketplace.js"></script>
+</body>
+</html>
