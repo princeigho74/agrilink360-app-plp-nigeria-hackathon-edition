@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AgriLink360 — Marketplace</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <!-- Payment libraries -->
+  <script src="https://js.paystack.co/v1/inline.js"></script>
+  <script src="https://checkout.flutterwave.com/v3.js"></script>
+
+  <!-- Your app.js will be loaded at bottom -->
+</head>
+<body>
+  <header>
+    <h1>AgriLink360 — Marketplace</h1>
+    <nav>
+      <a href="index.html">Home</a> |
+      <a href="iot.html">IoT Monitor</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section>
+      <h2>Available Products</h2>
+      <div id="productList" class="product-list"></div>
+    </section>
+
+    <!-- Payment modal placeholder will be injected by app.js -->
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
