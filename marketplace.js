@@ -35,6 +35,41 @@ if(loginForm){
     }
 }
 
+
+// ---------- Sign-Up ----------
+const signupForm = document.getElementById('signupForm');
+if(signupForm){
+  signupForm.onsubmit = (e)=>{
+    e.preventDefault();
+    const name = document.getElementById('signupName').value;
+    const email = document.getElementById('signupEmail').value;
+    const password = document.getElementById('signupPassword').value;
+    const role = document.getElementById('signupRole').value;
+    const position = document.getElementById('signupPosition').value;
+
+    const users = getUsers();
+    if(users.find(u=>u.email===email)){
+      const msg = document.getElementById('signupMsg');
+      msg.textContent='Email already exists!';
+      msg.classList.remove('hidden');
+      return;
+    }
+
+    const newUser = {
+      id:'u'+Date.now(),
+      name, email, password, role,
+      position: position||role,
+      freeTrialCount:0
+    };
+    users.push(newUser);
+    saveUsers(users);
+    const msg = document.getElementById('signupMsg');
+    msg.textContent='Account created successfully! You can now login.';
+    msg.classList.remove('hidden');
+    signupForm.reset();
+  }
+}
+
 // ---------- Logout ----------
 function logout(){
     localStorage.removeItem('currentUser');
