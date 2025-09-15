@@ -10,7 +10,10 @@
 <body class="bg-gray-50">
 <div class="min-h-screen">
   <header class="bg-white shadow p-4 flex justify-between items-center">
-    <h1 class="text-lg font-bold">Buyer Dashboard</h1>
+    <div>
+      <h1 class="text-lg font-bold">Buyer Dashboard</h1>
+      <p id="userInfo" class="text-sm text-gray-600"></p>
+    </div>
     <button onclick="logout()" class="text-red-600">Logout</button>
   </header>
 
@@ -21,6 +24,16 @@
     </section>
   </main>
 </div>
+
+<!-- Payment Modal Placeholder -->
+<div id="paymentModal" class="fixed inset-0 bg-black bg-opacity-40 hidden items-center justify-center">
+  <div class="bg-white p-6 rounded shadow max-w-sm w-full text-center">
+    <h2 class="text-lg font-bold mb-4">Payment Required</h2>
+    <p class="mb-4">You have reached your 3 free purchase limit. Please pay to continue buying products.</p>
+    <button onclick="closePayment()" class="px-4 py-2 bg-green-600 text-white rounded">Pay Now</button>
+  </div>
+</div>
+
 <script src="marketplace.js"></script>
 </body>
 </html>
