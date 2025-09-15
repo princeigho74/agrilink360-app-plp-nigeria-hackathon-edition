@@ -1,0 +1,15 @@
+html, body, #root {
+  height: 100%;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+/* Fade in animation */
+.fade-enter {
+  opacity: 0;
+  transform: translateY(6px);
+}
+.fade-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 180ms ease-out;
+}
