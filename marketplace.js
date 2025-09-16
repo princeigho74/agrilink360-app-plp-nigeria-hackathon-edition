@@ -16,20 +16,20 @@
 
     const { useState } = React;
 
-    // --- Product Seed Data ---
+    // --- Product Seed Data (linked to states/cities) ---
     const initialProducts = [
-      { id: 1, name: "Maize", location: "Kano", description: "Freshly harvested maize", price: 12000 },
-      { id: 2, name: "Yam", location: "Benue", description: "High quality yams", price: 35000 },
-      { id: 3, name: "Rice", location: "Nasarawa", description: "Local rice (destoned)", price: 40000 },
-      { id: 4, name: "Beans", location: "Kaduna", description: "Brown beans", price: 28000 },
-      { id: 5, name: "Pepper", location: "Ogun", description: "Fresh red pepper", price: 15000 },
-      { id: 6, name: "Bottled Water", location: "Lagos", description: "Clean table water", price: 500 },
-      { id: 7, name: "Tomatoes", location: "Kano", description: "Basket of fresh tomatoes", price: 20000 },
-      { id: 8, name: "Onions", location: "Sokoto", description: "Purple onions", price: 18000 },
-      { id: 9, name: "Garri", location: "Delta", description: "Ijebu Garri (white)", price: 25000 },
-      { id: 10, name: "Cassava", location: "Ekiti", description: "Raw cassava tubers", price: 22000 },
-      { id: 11, name: "Fish", location: "Rivers", description: "Fresh catfish (per kg)", price: 3500 },
-      { id: 12, name: "Bush Meat", location: "Cross River", description: "Smoked bush meat", price: 50000 },
+      { id: 1, name: "Maize", location: "Zaria, Kaduna", description: "Freshly harvested maize", price: 12000 },
+      { id: 2, name: "Yam", location: "Makurdi, Benue", description: "High quality yams", price: 35000 },
+      { id: 3, name: "Rice", location: "Lafia, Nasarawa", description: "Local rice (destoned)", price: 40000 },
+      { id: 4, name: "Beans", location: "Kano, Kano", description: "Brown beans", price: 28000 },
+      { id: 5, name: "Pepper", location: "Abeokuta, Ogun", description: "Fresh red pepper", price: 15000 },
+      { id: 6, name: "Bottled Water", location: "Ikeja, Lagos", description: "Clean bottled table water", price: 500 },
+      { id: 7, name: "Tomatoes", location: "Kano, Kano", description: "Basket of fresh tomatoes", price: 20000 },
+      { id: 8, name: "Onions", location: "Sokoto, Sokoto", description: "Purple onions", price: 18000 },
+      { id: 9, name: "Garri", location: "Warri, Delta", description: "Ijebu Garri (white)", price: 25000 },
+      { id: 10, name: "Cassava", location: "Ado-Ekiti, Ekiti", description: "Raw cassava tubers", price: 22000 },
+      { id: 11, name: "Fish", location: "Port Harcourt, Rivers", description: "Fresh catfish (per kg)", price: 3500 },
+      { id: 12, name: "Bush Meat", location: "Calabar, Cross River", description: "Smoked bush meat", price: 50000 },
     ];
 
     // --- Components ---
@@ -134,7 +134,7 @@
             value={newProduct.name} onChange={e=>setNewProduct({...newProduct, name:e.target.value})}/>
           <input type="text" placeholder="Description" className="border w-full mb-2 p-2"
             value={newProduct.description} onChange={e=>setNewProduct({...newProduct, description:e.target.value})}/>
-          <input type="text" placeholder="Location" className="border w-full mb-2 p-2"
+          <input type="text" placeholder="Location (State, City)" className="border w-full mb-2 p-2"
             value={newProduct.location} onChange={e=>setNewProduct({...newProduct, location:e.target.value})}/>
           <input type="number" placeholder="Price" className="border w-full mb-2 p-2"
             value={newProduct.price} onChange={e=>setNewProduct({...newProduct, price:parseInt(e.target.value)})}/>
