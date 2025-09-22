@@ -1,88 +1,112 @@
-🌍 AI-Driven Applicant Selection Tool
-📌 Overview
+🌍 AgriLink360 – AI-Driven Agri Marketplace
 
-This project was built for the Hackathon Challenge: AI-Driven Applicant Selection Tool.
-It demonstrates how applicant data can be processed, ranked, and recommended for LSETF/PLP programs.
+AgriLink360 is a prototype AI-powered web app that connects farmers directly with buyers across Nigeria, while using IoT simulation to detect and alert farmers about potential spoilage of goods.
+The solution is designed as part of a Hackathon challenge with focus on:
 
-The prototype includes:
+Zero Hunger
 
-Landing Page (index.html) – Intro and navigation.
+Empowering Farmers
 
-Applicant Dashboard (dashboard.html) – Run applicant analysis and unlock premium runs via Paystack/Flutterwave.
+Reducing Food Waste
 
-Integration Demo (iot.html) – Shows readiness for future connection with LSETF’s LMS upskilling platform.
+Seamless Future Integration with LMS & Payment Platforms
+
 
 🚀 Features
 
-✅ Data Analysis – Simulated scoring of applicants.
-✅ Candidate Ranking – Clear logic for ranking applicants.
-✅ Recommendations – Produces free analysis (2 runs).
-✅ Payments – Unlocks more runs using Paystack or Flutterwave APIs.
-✅ Integration Readiness – Demonstrates future LMS data export.
-✅ Multiple Pages – Clean separation (Landing, Dashboard, LMS demo).
+Role-Based Access
 
-📂 File Structure
-/project-root
- ├── index.html        → Landing Page
- ├── dashboard.html    → Applicant Dashboard
- ├── iot.html          → LMS Integration Demo
- ├── style.css         → Shared styling
- └── app.js            → Shared JavaScript (ranking + payments)
+👩‍🌾 Farmer: Add products, search for buyers, simulate IoT spoilage alerts.
 
-⚙️ How It Works
-
-Open index.html → Click Get Started.
-
-On dashboard.html → Run applicant analysis.
-
-First 2 runs are free.
-
-After that, the user must pay to continue.
-
-Payment options:
-
-Paystack – Inline checkout.
-
-Flutterwave – Inline checkout.
-
-On iot.html → View demo of LMS integration readiness.
-
-💳 Payment Integration
-
-Replace the test keys in app.js with your real public keys:
-
-key: 'pk_live_xxxxxxxxx'      // Paystack
-public_key: 'FLWPUBK_LIVE-xx' // Flutterwave
+🛒 Buyer: Browse available farm products, search/filter by state/city, connect with farmers.
 
 
-Both APIs run in test mode by default. Switch to live mode when deploying.
+Marketplace
+
+Preloaded Nigerian products (Rice, Beans, Tomatoes, Pepper, Garri, Cassava, Onions, Fish, Bush Meat, etc.)
+
+Linked to states/cities in Nigeria for localized matching.
+
+
+IoT Spoilage Alerts (Simulated)
+
+Farmers receive real-time alerts when goods risk spoilage (demo via toast notification).
+
+
+AI-Driven Matching (Prototype)
+
+Buyer ↔ Farmer matching logic (simulated ranking).
+
+Ready for extension with ML/AI models.
+
+
+Payment Trial
+
+Farmers can try adding products 3 times for free.
+
+Payment system (Paystack/Flutterwave) can be integrated after trial.
+
+
+🛠️ Tech Stack
+
+Frontend: React (via CDN + Babel), TailwindCSS
+
+Hosting: Works locally in browser or can be hosted on Netlify/Vercel/GitHub Pages
+
+Data: Mock JSON for products, buyers, Nigerian states & cities
+
+Future Integration: AI services for applicant/product ranking, LMS upskilling, IntaSend/Paystack for payments
+
+
+📂 Project Structure
+
+├── index.html       # Loads React + Tailwind + marketplace.js
+├── styles.css       # Optional custom styles
+├── marketplace.js   # Main React app (Farmers, Buyers, Marketplace, IoT, AI logic)
+└── README.md        # Project documentation
+
+
+⚙️ Setup & Run
+
+1. Clone Repo
+
+git clone https://github.com/yourusername/agrilink360.git
+cd agrilink360
+
+2. Open in Browser
+
+Simply open index.html in Chrome/Firefox/Edge.
+
+No backend needed — this is a front-end prototype.
+
 
 📸 Demo Screens
 
-Landing Page – Intro to the tool.
+Landing page with sign-in options
 
-Dashboard – Run free analyses, unlock more with payment.
+Buyer marketplace with product filters
 
-Integration Page – LMS readiness.
+Farmer dashboard with IoT alerts
 
-📑 Submission Requirements Covered
+Mock AI-driven ranking for buyer/farmer matching
 
-Functional Prototype – Multiple pages with applicant scoring + payments.
 
-Pitch Deck – Provided separately (pitch_deck.md).
+🔮 Next Steps
 
-Technical Documentation – Provided separately (technical_doc.md).
+Connect real IoT sensors for spoilage detection
 
-Demo/Presentation – Tool can be opened in any browser.
+Integrate AI/ML model for smarter buyer ↔ farmer product recommendations
 
-🔮 Future Improvements
+Add payment API (Paystack/Flutterwave) for real transactions
 
-Resume/CV upload with AI-powered NLP scoring.
+Link with LSETF LMS for farmer/buyer upskilling
 
-Real-time candidate ranking dashboard.
 
-Secure backend API for payment verification.
+👥 Contributors
 
-Full LMS API integration.
+Happy Igho Umukoro – Product Owner / Developer
 
-👨‍💻 Built for the Hackathon Challenge by Happy Igho Umukoro
+Open for collaborators
+
+
+
